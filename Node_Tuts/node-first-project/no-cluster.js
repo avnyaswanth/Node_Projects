@@ -12,7 +12,7 @@ const server = http.createServer((req, res) => {
         res.end("slow page");
     }
 });
-
-server.listen(8000, () => {
+const PORT = process.env.PORT || 8000
+server.listen(PORT, () => {
     console.log("server is up and running on port 8000");
 })
